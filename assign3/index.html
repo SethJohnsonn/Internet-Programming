@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Assignment 3</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<script src="Statistics.js" type="text/javascript"></script>
+<script>
+var numbers = new Array();
+var textarea;
+
+function main(){
+  makearray();
+  summation(numbers);
+  counter(numbers);
+  mean(numbers);
+  findVariance(numbers);
+  standardDeviation(numbers);
+  findMedian(numbers);
+  findMode(numbers);
+
+}
+function makearray(){
+  textarea =  document.getElementById("array").value;
+  numbers = textarea.split(" ");
+  for(i in numbers){
+    numbers[i] = parseInt(numbers[i]);
+  }
+
+}
+
+</script>
+</head>
+<body>
+<h1>Assignment 3: More JS</h1>
+
+<form name="form" method="post">
+
+<textarea id="array" name="array" rows="3" cols="30">
+Enter a series of numbers separated only by spaces
+</textarea>
+
+<br>
+<br>
+  <input type="button" value="Submit" onclick="main();">
+  <input type="reset" value="Reset Fields">
+</form>
+
+  <br>
+  <br>
+  <p>Mean:</p>
+  <p id="mean"></p>
+  <br>
+  <p>Median:</p>
+  <p id="median"></p>
+  <br>
+  <p>Count:</p>
+  <p id="count"></p>
+  <br>
+  <p>Sum:</p>
+  <p id="summation"></p>
+  <br>
+  <p>Mode:</p>
+  <p id="mode"></p>
+  <br>
+  <p>Variance:</p>
+  <p id="variance"></p>
+  <br>
+  <p>Standard Deviation:</p>
+  <p id="standard deviation"></p>
+
+
+<a href="Results.html" target="_blank">Results Page</a>
+<br>
+<a href="../../" target="_blank">Home Page</a>
+
+
+</body>
+</html>

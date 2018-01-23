@@ -1,0 +1,67 @@
+body {
+	background-color: #8d9aa3;
+	margin: 10;
+}
+
+hr {
+	color: white;
+}
+
+h1 {
+	font: sans;
+	border: 10px #4b515b;
+	border-radius: 15px;
+	background: #3474db;
+	color: white;
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+}
+
+h2 {
+	font: sans;
+	text-align: center;
+}
+
+.button {
+	background-color: #3474db;
+	border: none;
+	border-radius: 12px;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: black;
+}
+
+p {
+	font: sans;
+	color: black;
+	width: 800px;
+	padding: 10px;
+	margin: 25px;
+	
+}
+
+ul.circle {
+	list-style-type: circle;
+}
+
+a {
+	color: blue;
+}
+
+a:hover {
+	color: white;
+}
+
+
+
+	
+
+

@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<style>
+.canvas{
+  background: black;
+}
+</style>
+</head>
+<body>
+
+
+<h1>Assignment 4 - Drawing Something</h1>
+
+<canvas id="canvas" width="800" height="200" style="align:center"></canvas>
+
+<script>
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var angle = 0;
+var range = 50;
+var centerx = canvas.width / 2;
+var centerY = canvas.height / 2;
+var xsp = 1.0;
+var ysp = 0.01;
+var x = 0;
+var y = centerY;
+var text = "A Cosine Wave";
+
+requestAnimationFrame(
+  function draw() {
+
+      ctx.strokestyle = "white";
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+
+      x += xsp;
+      angle += ysp;
+      y = centerY + Math.cos(angle) * range;
+      ctx.lineTo(x, y);
+      ctx.strokeStyle = '#EEE';
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(0, centerY);
+      ctx.lineTo(canvas.width, centerY);
+      ctx.strokeStyle = 'yellow';
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(0, centerY + range);
+      ctx.lineTo(canvas.width, centerY + range);
+      ctx.strokeStyle = 'teal';
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(0, (centerY - range));
+      ctx.lineTo(canvas.width, (centerY - range));
+      ctx.strokeStyle = 'black';
+      ctx.stroke();
+
+      ctx.font="20px sans";
+      ctx.fillStyle = "white";
+      ctx.textAlign = "center";
+      ctx.fillText("A Cosine Wave that is found in natural phenomena.", canvas.width/1.9, canvas.height/1.2);
+
+      requestAnimationFrame(draw);
+    }
+);
+</script>
+
+<p>In this diagram, black = 1, yellow = 0, and teal = -1. Go Jags!</p>
+
+</body>
+</html>
